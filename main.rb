@@ -21,7 +21,7 @@ loop do
 
   break if input == "quit" || input == "exit"
 
-  if valid_square.match input
+  if valid_square =~ input
     puts board.get_piece_at(input) || "There is no piece on #{input}."
   elsif input == "display" or input == "show" or input == "print" or input == "p"
     puts board
