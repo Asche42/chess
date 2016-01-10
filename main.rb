@@ -19,7 +19,7 @@ loop do
   print "> "
   input = gets.chomp
 
-  break if input == "quit" || input == "exit"
+  break if %w(quit exit).include?(input)
 
   if valid_square =~ input
     puts board.get_piece_at(input) || "There is no piece on #{input}."
