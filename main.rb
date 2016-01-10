@@ -23,9 +23,9 @@ loop do
 
   if valid_square =~ input
     puts board.get_piece_at(input) || "There is no piece on #{input}."
-  elsif input == "display" or input == "show" or input == "print" or input == "p"
+  elsif %w(display show print p).include?(input)
     puts board
-  elsif input == "help" or input == "?"
+  elsif %w(help ?).include?(input)
     print_help
   else
     puts "This is not a valid command. Type “help” to get help."
