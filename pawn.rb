@@ -20,7 +20,7 @@ module Chess
       if @color == :white and @already_played
         next_positions << position.up
       elsif @color == :white
-        next_positions << position.up
+        next_positions << position.up.up
       elsif @color == :black and @already_played
         next_positions << position.down
       else
