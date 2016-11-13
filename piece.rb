@@ -7,7 +7,7 @@ module Chess
     attr_reader :position
 
     def initialize(position, color)
-      @name = self.class.name
+      @name = self.class.name.split('::').last || ''
       @position = Position.new position
       @color = color
     end
